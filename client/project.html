@@ -1,0 +1,47 @@
+<template name="project">
+  <header>
+    <div class="row">
+      <div class="large-6 columns">
+        <h2 class="subheader">
+          <a href="{{pathFor 'projects'}}">Projects</a> &gt;
+          {{project.name}}
+        </h2>
+      </div>
+      <div class="large-6 columns">
+        <ul class="project-actions button-group">
+          <li>
+            <a class="small alert button" id="delete-project">
+              Delete Project
+            </a>
+          </li>
+          <li>
+            <a class="small button" id="upload-files">
+              Add Image
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <hr />
+
+  <div class="row">
+    <div class="large-9 columns">
+      <ul class="large-block-grid-4 project-screens-list">
+        {{#each project.screens}}
+          <li>{{> project_show}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="large-3 columns">
+      <h4 class="subheader">Shared With</h4>
+      No one.
+    </div>
+  </div>
+</template>
+
+<template name="project_show">
+  <div class="screen">
+    <img src="{{url}}" />
+  </div>
+</template>

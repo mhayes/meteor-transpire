@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "scss": {},
+    "router": {},
+    "iron-router": {},
+    "filepicker": {}
+  }
+}

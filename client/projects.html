@@ -1,0 +1,50 @@
+<template name="projects">
+  <header>
+    <div class="row">
+      <div class="large-6 columns">
+        <h2 class="subheader">
+          Projects
+        </h2>
+      </div>
+      <div class="large-6 columns">
+        <ul class="project-actions button-group">
+          <li>
+            <a class="small button" id="new-project">New Project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <hr />
+
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="projects-list large-block-grid-6">
+      {{#each projects}}
+        <li>
+          {{> projects_show}}
+        </li>
+      {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{> projects_modals}}
+</template>
+
+<template name="projects_show">
+  <div class="screen">
+    <a href="{{pathFor 'project'}}">
+      <img src="{{screens.[0].url}}" /><br />
+      <h6 class="subheader">{{name}}</h6>
+    </a>
+  </div>
+</template>
+
+<template name="projects_modals">
+  <div class="reveal-modal-bg"></div>
+  <div id="new-project-modal" class="small reveal-modal">
+    <h2>Create a New Project</h2>
+    <p>Enter a name for your project and press enter.</p>
+    <input type="text" name="project-name" placeholder="Project Name..." />
+  </div>
+</template>

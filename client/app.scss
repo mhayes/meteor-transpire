@@ -1,0 +1,26 @@
+@import "foundation";
+
+header {
+  background: #efefef;
+}
+
+hr {margin-top:0;}
+
+.projects-list {
+  .screen {
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
+}
+
+.project-screens-list {
+  .screen {
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
+}
+
+.project-actions {
+  float: right;
+  margin-top: 15px;
+}
