@@ -51,7 +51,14 @@ Router.map(function () {
         next_screen: {_id: project._id, position: position+1},
         position: this.params.position
       }
+    },
+    after: function(e) {
+      // Could also use imagesLoaded, and bind to an event
+      // on the Template.screen.events = {'imagesLoaded': function(){}}
+      var imgLoad = imagesLoaded($("#screenshot"));
+      imgLoad.on('done', function(){
+        $("#screenshot").markitup();
+      });
     }
   });
-  
 });
