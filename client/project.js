@@ -8,6 +8,10 @@ Template.project.events = {
       maxFiles:20
     },function(InkBlobs){
       InkBlobs.forEach(function(InkBlob){
+        // Screens.insert({
+        //   project_id: self.project._id,
+        //   url: InkBlob.url
+        // });
         Projects.update(self.project._id, {$push: {
           screens: {url:InkBlob.url}
         }});

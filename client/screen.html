@@ -1,0 +1,40 @@
+<template name="screen">
+  <header>
+    <div class="row">
+      <div class="large-6 columns">
+        <h2 class="subheader">
+          {{#with project}}
+          <a href="{{pathFor 'project'}}">{{name}}</a> &gt;
+          {{/with}}
+          {{position}}
+        </h2>
+      </div>
+      <div class="large-6 columns">
+        <ul class="project-actions button-group">
+          <li>
+            {{#with prev_screen}}
+            <a href="{{pathFor 'screen'}}" class="small button prev-screen">
+              Prev
+            </a>
+            {{/with}}
+          </li>
+          <li>
+            {{#with next_screen}}
+            <a href="{{pathFor 'screen'}}" class="small button next-screen">
+              Next
+            </a>
+            {{/with}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <hr />
+
+
+  <div class="row">
+    <div class="large-12">
+      <img src="{{screen.url}}" />
+    </div>
+  </div>
+</template>

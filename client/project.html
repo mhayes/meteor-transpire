@@ -28,7 +28,7 @@
   <div class="row">
     <div class="large-9 columns">
       <ul class="large-block-grid-4 project-screens-list">
-        {{#each project.screens}}
+        {{#each screens}}
           <li>{{> project_show}}</li>
         {{/each}}
       </ul>
@@ -41,7 +41,7 @@
 </template>
 
 <template name="project_show">
-  <div class="screen">
+  <a href="{{pathFor 'screen'}}" class="screen">
     <img src="{{url}}" />
-  </div>
+  </a>
 </template>
